@@ -35,5 +35,5 @@ cd sample
 mkdir build
 cd build && cmake .. && make && make install
 cd ..
-./install/runNet --caffemodel=${CAFFE_MODEL_NAME} --prototxt=${CAFFE_PROTOTXT} --input=./test.jpg
+.main ../person_suitcase.png detect
 ```
