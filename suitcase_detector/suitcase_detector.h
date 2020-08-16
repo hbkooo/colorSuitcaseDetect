@@ -65,7 +65,7 @@ private:
 
 private:
     int outputCount;
-    int class_num;
+    const int class_num = 80;
     std::unique_ptr<Tn::trtNet> net;
     bool init_flag = false;
 
@@ -74,7 +74,7 @@ private:
     std::map<int, std::string> LABELS = {
             {24, "backpack"},
             {28, "suitcase"},
-            {27, "handbag"},
+            {26, "handbag"},
 //            {0,  "person"}
     };
 
