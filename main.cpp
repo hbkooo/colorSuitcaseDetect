@@ -90,9 +90,9 @@ int main(int argc, char** argv){
 	std::string prototxt = "../suitcase.prototxt";
 	std::string caffemodel = "../suitcase.caffemodel";
 	std::string engine = "../suitcase.engine";
-    std::string Cprototxt = "../classify.prototxt";
-    std::string Ccaffemodel = "../classify.caffemodel";
-    std::string Cengine = "../classify.engine";
+    	std::string Cprototxt = "../classify.prototxt";
+    	std::string Ccaffemodel = "../classify.caffemodel";
+    	std::string Cengine = "../classify.engine";
 	
 	if(argc <= 2){
 		cout << "use ./main img_path [detect|classify] \n";
@@ -110,9 +110,9 @@ int main(int argc, char** argv){
 	            << "image_path : " << img_path << endl;
 
 	if(!strcmp(argv[2], "classify"))
-        testClassify(prototxt,caffemodel, engine, img_path);
+        	testClassify(Cprototxt,Ccaffemodel, Cengine, img_path);
 	else
-	    testYolov3(prototxt,caffemodel, engine, Cprototxt,Ccaffemodel, Cengine, img_path);
+	   	testYolov3(prototxt,caffemodel, engine, Cprototxt,Ccaffemodel, Cengine, img_path);
 
 	
 	return 0;
