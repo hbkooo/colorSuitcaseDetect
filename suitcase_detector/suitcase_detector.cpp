@@ -19,7 +19,6 @@ bool fileIsExist(const char *filePath) {
 SuitcaseDetector::SuitcaseDetector(const std::string &prototxt, const std::string &caffemodel,
                                    const std::string &saveName) {
     vector<vector<float>> calibData;
-    class_num = 80;     // coco的80类
     net.reset(new trtNet(prototxt, caffemodel, class_num, {"yolo-det"}, calibData));
     cout << "save Engine..." << saveName << endl;
     net->saveEngine(saveName);
